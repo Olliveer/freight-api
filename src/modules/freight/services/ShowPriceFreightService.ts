@@ -15,8 +15,6 @@ class ShowPriceFreightService {
         Number(zip_code) >= el.initial_zip && Number(zip_code) <= el.final_zip
     );
 
-    console.log("exists", zipCodeExists);
-
     if (!zipCodeExists) {
       throw new AppError(`We do not attend this zipcode: ${zip_code}`);
     }
@@ -38,13 +36,6 @@ class ShowPriceFreightService {
       formattedPrice.gris * formattedPrice.price +
       formattedPrice.advalorem * formattedPrice.price +
       formattedPrice.total_weight * 0.005;
-
-    console.log({
-      gris: formattedPrice.gris * formattedPrice.price,
-      advalorem: formattedPrice.advalorem * formattedPrice.price,
-      weight: formattedPrice.total_weight * 0.005,
-      calc: totalFreigth,
-    });
 
     return {
       price: Intl.NumberFormat("pt-BR", {
