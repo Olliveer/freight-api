@@ -50,25 +50,25 @@ https://github.com/Olliveer/freight-api.git
 ## 2. Instale as Dependencias
 
 ```bash
-$ yarn
+yarn
 ```
 
 ## Rode a migration
 
 ```
-$ yarn prisma migrate dev -n MIGRATE_NAME
+yarn prisma migrate dev -n MIGRATE_NAME
 ```
 
 ## Seed o db
 
 ```
-$ yarn seed
+yarn seed
 ```
 
 ## 5. Inicie o server
 
 ```bash
-$ yarn dev
+yarn dev
 ```
 
 # :closed_book: Licença
