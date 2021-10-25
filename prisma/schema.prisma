@@ -1,0 +1,20 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+model ZipCode {
+  id          String @id @default(uuid())
+  initial_zip Int
+  final_zip   Int
+  deadline    Int
+  price       Int
+  gris        Int
+  advalorem   Int
+
+  @@map("zip_code")
+}
